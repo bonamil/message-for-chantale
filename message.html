@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            transition: background-color 1s;
+        }
+        .roses {
+            display: none;
+            transition: opacity 1s;
+        }
+    </style>
+    <title>Chantale's Message</title>
+</head>
+<body>
+    <button id="messageButton" onclick="showMessage()">Show Message</button>
+    <p id="message" style="display: none;">Hi Chantale, I'm not sure if you've noticed, but I really admire your smile, your laughter, and your vibes. You always brighten up my day!</p>
+    <img id="rosesImage" class="roses" src="https://via.placeholder.com/150/ff0000" alt="Red Roses">
+    
+    <script>
+        function showMessage() {
+            document.getElementById("message").style.display = "block";
+            document.body.style.backgroundColor = "blue";
+            setTimeout(function() {
+                document.body.style.backgroundColor = "red";
+                document.getElementById("rosesImage").style.display = "block";
+            }, 5000); // 5 seconds
+        }
+    </script>
+</body>
+</html>
